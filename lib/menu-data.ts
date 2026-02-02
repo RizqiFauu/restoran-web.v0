@@ -1,0 +1,171 @@
+export interface MenuItem {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: 'ramen' | 'sushi' | 'donburi' | 'appetizers' | 'drinks';
+  image: string;
+}
+
+export const menuItems: MenuItem[] = [
+  {
+    id: '1',
+    name: 'Tonkotsu Ramen',
+    description: 'Rich pork bone broth with tender chashu pork, egg, and nori',
+    price: 14.99,
+    category: 'ramen',
+    image: 'https://images.unsplash.com/photo-1553163147-622f69c17c72?w=500&h=500&fit=crop',
+  },
+  {
+    id: '2',
+    name: 'Miso Ramen',
+    description: 'Savory miso broth with mushrooms, bean sprouts, and soft noodles',
+    price: 13.99,
+    category: 'ramen',
+    image: 'https://images.unsplash.com/photo-1618519894905-c5213b22e38b?w=500&h=500&fit=crop',
+  },
+  {
+    id: '3',
+    name: 'Shoyu Ramen',
+    description: 'Classic soy-based broth with chicken, corn, and green onions',
+    price: 12.99,
+    category: 'ramen',
+    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&h=500&fit=crop',
+  },
+  {
+    id: '4',
+    name: 'Spicy Tan Tan Ramen',
+    description: 'Numbing and spicy sesame broth with ground pork and vegetables',
+    price: 15.99,
+    category: 'ramen',
+    image: 'https://images.unsplash.com/photo-1613395877303-13d7450e8be0?w=500&h=500&fit=crop',
+  },
+  {
+    id: '5',
+    name: 'California Roll',
+    description: 'Crab, avocado, cucumber wrapped in rice and seaweed',
+    price: 9.99,
+    category: 'sushi',
+    image: 'https://images.unsplash.com/photo-1553621042-f6de2442ae8d?w=500&h=500&fit=crop',
+  },
+  {
+    id: '6',
+    name: 'Spicy Tuna Roll',
+    description: 'Spicy tuna, cucumber, avocado with sriracha mayo',
+    price: 10.99,
+    category: 'sushi',
+    image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=500&h=500&fit=crop',
+  },
+  {
+    id: '7',
+    name: 'Philadelphia Roll',
+    description: 'Smoked salmon, cream cheese, cucumber, avocado',
+    price: 11.99,
+    category: 'sushi',
+    image: 'https://images.unsplash.com/photo-1570423776145-0ac0ff01c35f?w=500&h=500&fit=crop',
+  },
+  {
+    id: '8',
+    name: 'Dragon Roll',
+    description: 'Shrimp tempura, avocado, cucumber topped with eel and sauce',
+    price: 13.99,
+    category: 'sushi',
+    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&h=500&fit=crop',
+  },
+  {
+    id: '9',
+    name: 'Oyakodon',
+    description: 'Egg and chicken over rice in a delicate dashi broth',
+    price: 11.99,
+    category: 'donburi',
+    image: 'https://images.unsplash.com/photo-1585518419759-5bf38dc24fc4?w=500&h=500&fit=crop',
+  },
+  {
+    id: '10',
+    name: 'Katsudon',
+    description: 'Crispy breaded pork cutlet over rice with egg and vegetables',
+    price: 12.99,
+    category: 'donburi',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop',
+  },
+  {
+    id: '11',
+    name: 'Gyudon',
+    description: 'Tender beef slices, onions, and egg over steaming rice',
+    price: 13.99,
+    category: 'donburi',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop',
+  },
+  {
+    id: '12',
+    name: 'Unagi Don',
+    description: 'Grilled eel glazed with sweet sauce over fluffy rice',
+    price: 15.99,
+    category: 'donburi',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop',
+  },
+  {
+    id: '13',
+    name: 'Edamame',
+    description: 'Steamed soybeans with sea salt',
+    price: 4.99,
+    category: 'appetizers',
+    image: 'https://images.unsplash.com/photo-1599599810694-b5ac4dd33e2d?w=500&h=500&fit=crop',
+  },
+  {
+    id: '14',
+    name: 'Gyoza',
+    description: 'Pan-fried pork dumplings served with dipping sauce (6 pieces)',
+    price: 6.99,
+    category: 'appetizers',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a104?w=500&h=500&fit=crop',
+  },
+  {
+    id: '15',
+    name: 'Tempura Platter',
+    description: 'Shrimp and vegetable tempura with dipping sauce',
+    price: 8.99,
+    category: 'appetizers',
+    image: 'https://images.unsplash.com/photo-1568299482903-e3fbc5a4c60c?w=500&h=500&fit=crop',
+  },
+  {
+    id: '16',
+    name: 'Sake',
+    description: 'Premium Japanese rice wine (180ml)',
+    price: 8.99,
+    category: 'drinks',
+    image: 'https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&h=500&fit=crop',
+  },
+  {
+    id: '17',
+    name: 'Japanese Beer',
+    description: 'Asahi Super Dry (12oz)',
+    price: 5.99,
+    category: 'drinks',
+    image: 'https://images.unsplash.com/photo-1608270861620-7db80a2c3bad?w=500&h=500&fit=crop',
+  },
+  {
+    id: '18',
+    name: 'Yuzu Lemonade',
+    description: 'Refreshing Japanese citrus beverage',
+    price: 4.99,
+    category: 'drinks',
+    image: 'https://images.unsplash.com/photo-1505252585461-04db1267ae5b?w=500&h=500&fit=crop',
+  },
+  {
+    id: '19',
+    name: 'Green Tea',
+    description: 'Hot or iced traditional sencha green tea',
+    price: 2.99,
+    category: 'drinks',
+    image: 'https://images.unsplash.com/photo-1597318372441-6b0b0a0e7e76?w=500&h=500&fit=crop',
+  },
+];
+
+export const categories = [
+  { id: 'ramen', label: 'Ramen', count: 4 },
+  { id: 'sushi', label: 'Sushi Rolls', count: 4 },
+  { id: 'donburi', label: 'Donburi', count: 4 },
+  { id: 'appetizers', label: 'Appetizers', count: 4 },
+  { id: 'drinks', label: 'Drinks', count: 3 },
+];
