@@ -11,10 +11,18 @@ export function Header() {
   const pathname = usePathname();
   const cartCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
+  // Navigation items
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/menu', label: 'Menu' },
+  ];
+
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
               桜
@@ -22,25 +30,24 @@ export function Header() {
             <h1 className="text-2xl font-bold text-foreground hidden sm:block">Sakura</h1>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className={`font-medium transition-colors ${
-                pathname === '/' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/menu"
-              className={`font-medium transition-colors ${
-                pathname === '/menu' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              Menu
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`font-medium transition-colors ${
+                  pathname === item.href 
+                    ? 'text-primary' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
+          {/* Cart Button */}
           <Link href="/cart">
             <Button variant="outline" className="relative gap-2 bg-transparent">
               <ShoppingCart size={20} />
@@ -53,6 +60,23 @@ export function Header() {
             </Button>
           </Link>
         </div>
+
+        {/* Mobile Navigation */}
+        <nav className="md:hidden flex justify-center gap-6 mt-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`font-medium text-sm transition-colors ${
+                pathname === item.href 
+                  ? 'text-primary border-b-2 border-primary' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
